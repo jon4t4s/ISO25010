@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 25010 - Características</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --dark-green: #27ae60;
+            --black: #212121;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --accent: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            padding-bottom: 80px; /* Space for fixed footer*/
+            overflow-x: hidden; /* Impede a barra de rolagem lateral */
+
+        }
+
+        .navbar {
+            background: var(--black);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-green) !important;
+        }
+
+        .nav-link {
+            color: var(--white) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-green) !important;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--dark-green);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--white);
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            color: var(--dark-green);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+            margin-bottom: 4rem; /* Extra space before footer */
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 2rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 0;
+                margin-bottom: 3rem;
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            body {
+                padding-bottom: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Qualidade de Software</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="iso.html">ISO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ISO Characteristics Section -->
+    <section id="iso" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Características da ISO 25010</h2>
+            <p class="section-subtitle animate__animated animate__fadeIn animate__delay-1s">Qualidade do Produto</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp">
+                        <i class="fas fa-check-circle card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Funcionalidade</h5>
+                            <p class="card-text">Capacidade do software de fornecer funções que atendem às necessidades explícitas e implícitas sob condições especificadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        <i class="fas fa-tachometer-alt card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Eficiência de Desempenho</h5>
+                            <p class="card-text">Desempenho relativo aos recursos utilizados sob condições específicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp animate__delay-2s">
+                        <i class="fas fa-exchange-alt card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Compatibilidade</h5>
+                            <p class="card-text">Capacidade do software de coexistir e interoperar com outros sistemas sem conflitos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp animate__delay-3s">
+                        <i class="fas fa-user-check card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Usabilidade</h5>
+                            <p class="card-text">Facilidade com que o software pode ser usado de forma eficaz, eficiente e satisfatória.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Confiabilidade</h5>
+                            <p class="card-text">Capacidade do software de manter um nível de desempenho especificado sob condições normais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        <i class="fas fa-lock card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Segurança</h5>
+                            <p class="card-text">Capacidade de proteger informações e dados contra acessos não autorizados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp animate__delay-2s">
+                        <i class="fas fa-tools card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Manutenibilidade</h5>
+                            <p class="card-text">Facilidade com que o software pode ser modificado para corrigir falhas ou melhorar funcionalidades.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card text-center p-4 animate__animated animate__fadeInUp animate__delay-3s">
+                        <i class="fas fa-globe card-icon"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Portabilidade</h5>
+                            <p class="card-text">Capacidade do software de ser transferido de um ambiente para outro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 Jônatas Gabriel. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
