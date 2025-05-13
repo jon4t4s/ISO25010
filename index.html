@@ -92,21 +92,46 @@
             margin-bottom: 3rem;
         }
 
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 3rem;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--primary-green);
         }
 
-        .card-img-top {
-            border-radius: 15px 15px 0 0;
-            object-fit: cover;
-            max-height: 200px;
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2.25rem;
+            top: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: var(--primary-green);
+            border: 3px solid var(--white);
+        }
+
+        .timeline-date {
+            font-size: 1rem;
+            color: var(--dark-green);
+            font-weight: 600;
         }
 
         .section-padding {
@@ -127,6 +152,16 @@
             .section-padding {
                 padding: 3rem 0;
             }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-dot {
+                left: -1.75rem;
+                width: 1.2rem;
+                height: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -140,9 +175,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="iso.html">ISO</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comparacao.html">Comparação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
                 </ul>
             </div>
         </div>
@@ -160,19 +196,33 @@
         </div>
     </section>
 
-    <!-- ISO 25010 Concepts Section -->
+    <!-- Concepts Timeline Section -->
     <section id="concepts" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Conceitos da ISO 25010</h2>
-            <p class="section-subtitle">Norma internacional para avaliação de qualidade de software</p>
+            <h2 class="section-title">Evolução da Qualidade de Software</h2>
+            <p class="section-subtitle">Uma linha do tempo das normas que moldaram a qualidade em software</p>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <p>A ISO/IEC 25010 é uma norma que define um modelo de qualidade para sistemas e software, dividindo as características de qualidade em duas categorias principais:</p>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-success"></i><strong>Qualidade do Produto:</strong> Oito características que avaliam o desempenho e a usabilidade do software.</li>
-                        <li class="mb-2"><i class="fas fa-check-circle me-2 text-success"></i><strong>Qualidade em Uso:</strong> Cinco características que medem a eficácia, eficiência e satisfação do usuário em contextos específicos.</li>
-                    </ul>
-                    <p>Essas características ajudam desenvolvedores e empresas a garantir que o software atenda às expectativas dos usuários e aos requisitos técnicos.</p>
+                    <div class="timeline">
+                        <div class="timeline-item animate__animated animate__fadeInUp">
+                            <div class="timeline-dot"></div>
+                            <h6 class="timeline-date">1987</h6>
+                            <h5>ISO 9001 – Gestão da Qualidade Organizacional</h5>
+                            <p>A ISO 9001 é uma norma internacional que estabelece diretrizes para sistemas de gestão da qualidade em organizações. Embora não seja exclusiva para software, ela abrange processos de desenvolvimento de software como parte das operações organizacionais. A norma foca em garantir que produtos e serviços atendam aos requisitos dos clientes, promovendo melhoria contínua, consistência e satisfação. No contexto de software, a ISO 9001 ajuda a estruturar processos de desenvolvimento, testes e entrega, assegurando qualidade em cada etapa.</p>
+                        </div>
+                        <div class="timeline-item animate__animated animate__fadeInUp animate__delay-1s">
+                            <div class="timeline-dot"></div>
+                            <h6 class="timeline-date">1991</h6>
+                            <h5>ISO 9126 – Primeira Norma de Qualidade de Software</h5>
+                            <p>A ISO 9126 foi a primeira norma dedicada à qualidade de produtos de software. Introduzida em 1991, ela definiu um modelo com seis características principais: funcionalidade, confiabilidade, usabilidade, eficiência, manutenibilidade e portabilidade. Essas características serviram como base para avaliar a qualidade de um software do ponto de vista técnico e do usuário. A ISO 9126 foi um marco por trazer um padrão claro e mensurável, pavimentando o caminho para normas mais avançadas, como a ISO 25010.</p>
+                        </div>
+                        <div class="timeline-item animate__animated animate__fadeInUp animate__delay-2s">
+                            <div class="timeline-dot"></div>
+                            <h6 class="timeline-date">2011</h6>
+                            <h5>ISO 25010 – Qualidade de Sistemas e Software</h5>
+                            <p>A ISO/IEC 25010, lançada em 2011, é uma evolução da ISO 9126. Ela define um modelo de qualidade mais abrangente, dividindo as características em duas categorias: <strong>Qualidade do Produto</strong>, com oito características (funcionalidade, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade), e <strong>Qualidade em Uso</strong>, com cinco características (eficácia, eficiência, satisfação, liberdade de riscos e cobertura de contexto). Essa norma ajuda desenvolvedores e empresas a criar softwares que atendem tanto às expectativas dos usuários quanto aos requisitos técnicos.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,7 +231,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>© 2025 Jônatas Gabriel. Todos os direitos reservados.</p>
+            <p>© 2025 Qualidade de Software. Todos os direitos reservados.</p>
         </div>
     </footer>
 
